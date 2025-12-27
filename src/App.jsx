@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Projects from './components/Projects'; // <--- Importe aqui
+import Projects from './components/Projects';
+import Contact from './components/Contact'; // <--- Importe aqui
 import { translations } from './data/translations';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   const currentTexts = translations[language];
 
   return (
-    <div className="bg-primary min-h-screen text-txt">
+    <div className="bg-primary min-h-screen text-txt font-sans">
       <Navbar
         toggleLanguage={toggleLanguage}
         currentLang={language}
@@ -24,7 +25,12 @@ function App() {
       <main>
         <Hero texts={currentTexts.hero} />
         <Projects language={language} />
+        <Contact language={language} />
       </main>
+
+      <footer className="w-full py-6 text-center text-gray-500 bg-primary border-t border-gray-800 text-sm">
+        <p>© 2025 Luiz Eduardo. {language === 'pt' ? 'Todos os direitos reservados.' : 'All rights reserved.'}</p>
+      </footer>
     </div>
   )
 }

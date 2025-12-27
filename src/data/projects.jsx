@@ -1,42 +1,157 @@
-import { FaJava, FaReact, FaPython, FaBrain, FaRobot, FaDatabase } from 'react-icons/fa';
-import { SiSpringboot, SiArduino, SiOpenai, SiStreamlit } from 'react-icons/si';
-
+import {
+    FaJava, FaReact, FaPython, FaDatabase, FaMobileAlt, FaGamepad, FaSteam, FaTerminal, FaCode, FaLaptopCode,
+    FaServer, FaBrain, FaCloud, FaLeaf, FaWindows, FaFire, FaFileCode, FaProjectDiagram, FaCogs, FaMicrochip
+} from 'react-icons/fa';
 
 export const projects = [
+    // --- PROJETOS DESTAQUE (ENTERPRISE) ---
     {
         id: 1,
         title: "LPP System (ITA)",
         category: "work",
-        img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        // Imagem: Laboratório de Tecnologia/Robótica
+        img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop",
         desc_pt: "Sistema de controle e automação para o laboratório do ITA.",
         desc_en: "Control and automation system for ITA laboratory.",
-        long_desc_pt: "Este é um sistema complexo desenvolvido para o Laboratório de Pesquisa (LPP) do ITA. O objetivo é gerenciar o acesso físico ao prédio, monitorar atividades via câmeras e manter um registro detalhado de pesquisadores e projetos.",
-        long_desc_en: "This is a complex system developed for ITA's Research Laboratory (LPP). The goal is to manage physical access to the building, monitor activities via cameras, and keep a detailed record of researchers and projects.",
+        long_desc_pt: "Sistema interno crítico desenvolvido para o Laboratório de Pesquisa em Plasmas (LPP) do ITA. Gerencia o acesso físico ao prédio, monitora atividades sensíveis via câmeras e mantém registros detalhados.",
+        long_desc_en: "Critical internal system developed for ITA's Plasma Research Laboratory (LPP). Manages physical building access, monitors sensitive activities via cameras, and keeps detailed records.",
         gitUrl: "#",
         previewUrl: "#",
         tech_details: [
-            { name: "Java", icon: <FaJava />, purpose_pt: "Lógica robusta do Backend e regras de negócio.", purpose_en: "Robust Backend logic and business rules." },
-            { name: "Spring Boot", icon: <SiSpringboot />, purpose_pt: "Framework para criar a API REST e gerenciar injeção de dependência.", purpose_en: "Framework to build REST API and manage dependency injection." },
-            { name: "Arduino", icon: <SiArduino />, purpose_pt: "Integração com hardware de câmeras e sensores de porta.", purpose_en: "Integration with camera hardware and door sensors." },
-            { name: "React", icon: <FaReact />, purpose_pt: "Interface administrativa responsiva para os gestores.", purpose_en: "Responsive administrative interface for managers." }
+            { name: "Java", icon: <FaJava className="text-orange-500" />, purpose_pt: "Backend robusto.", purpose_en: "Robust Backend." },
+            { name: "Spring Boot", icon: <FaLeaf className="text-green-500" />, purpose_pt: "API REST.", purpose_en: "REST API." },
+            { name: "Arduino", icon: <FaMicrochip className="text-teal-500" />, purpose_pt: "Integração IoT.", purpose_en: "IoT integration." },
+            { name: "React", icon: <FaReact className="text-blue-400" />, purpose_pt: "Dashboard administrativo.", purpose_en: "Administrative dashboard." }
         ]
     },
     {
         id: 2,
-        title: "Incluid IA",
+        title: "Includ.IA",
         category: "college",
-        img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        desc_pt: "Projeto acadêmico focado em acessibilidade e inclusão usando IA.",
-        desc_en: "Academic project focused on accessibility and inclusion using AI.",
-        long_desc_pt: "Projeto desenvolvido na faculdade com o objetivo de utilizar Inteligência Artificial para quebrar barreiras de acessibilidade. A ferramenta analisa cenários e auxilia pessoas com deficiência na interação com o ambiente digital.",
-        long_desc_en: "Project developed in college aimed at using Artificial Intelligence to break accessibility barriers. The tool analyzes scenarios and assists people with disabilities in interacting with the digital environment.",
+        // Imagem: Inteligência Artificial Abstrata
+        img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "Plataforma premiada de recrutamento com IA Generativa.",
+        desc_en: "Award-winning recruitment platform powered by Generative AI.",
+        long_desc_pt: "Vencedor do FIAP Global Solution. Uma plataforma revolucionária que utiliza a IA Generativa para reescrever descrições de vagas de forma inclusiva e anonimizar perfis de candidatos.",
+        long_desc_en: "FIAP Global Solution Winner. A revolutionary platform using Generative AI to rewrite job descriptions inclusively and anonymize candidate profiles.",
+        gitUrl: "https://github.com/includia",
+        previewUrl: "#",
+        tech_details: [
+            { name: "Gemini AI", icon: <FaBrain className="text-purple-500" />, purpose_pt: "IA Generativa.", purpose_en: "Generative AI." },
+            { name: "Azure Cloud", icon: <FaCloud className="text-blue-600" />, purpose_pt: "Orquestração na Nuvem.", purpose_en: "Cloud Orchestration." },
+            { name: "Oracle & Mongo", icon: <FaDatabase className="text-red-600" />, purpose_pt: "Bancos de Dados.", purpose_en: "Databases." },
+            { name: "Redis", icon: <FaServer className="text-red-500" />, purpose_pt: "Cache rápido.", purpose_en: "Fast caching." }
+        ]
+    },
+    {
+        id: 3,
+        title: "ApiAnime (.NET 9)",
+        category: "personal",
+        // Imagem: Código em tela escura (Matrix style)
+        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "API robusta com Clean Architecture e .NET 9.",
+        desc_en: "Robust API featuring Clean Architecture and .NET 9.",
+        long_desc_pt: "Projeto de backend avançado demonstrando domínio de Arquitetura Limpa (Clean Architecture). A API gerencia um catálogo completo de animes e personagens.",
+        long_desc_en: "Advanced backend project demonstrating mastery of Clean Architecture. The API manages a complete catalog of anime and characters.",
+        gitUrl: "https://github.com/lu1zedu/apianime",
+        previewUrl: "#",
+        tech_details: [
+            { name: ".NET 9", icon: <FaWindows className="text-purple-600" />, purpose_pt: "Framework Moderno.", purpose_en: "Modern Framework." },
+            { name: "PostgreSQL", icon: <FaDatabase className="text-blue-400" />, purpose_pt: "Banco Relacional.", purpose_en: "Relational Database." },
+            { name: "Entity Framework", icon: <FaCode className="text-gray-400" />, purpose_pt: "ORM.", purpose_en: "ORM." },
+            { name: "Swagger", icon: <FaFileCode className="text-green-600" />, purpose_pt: "Documentação.", purpose_en: "Documentation." }
+        ]
+    },
+    {
+        id: 4,
+        title: "MeuEcommerceApp",
+        category: "college",
+        // Imagem: Celular com aplicativo
+        img: "/icone.png",
+        desc_pt: "App mobile completo com Firebase e Internacionalização.",
+        desc_en: "Full mobile app with Firebase and Internationalization.",
+        long_desc_pt: "Protótipo Mobile de alta fidelidade desenvolvido com React Native. Possui funcionalidades reais: autenticação segura, carrinho de compras e suporte nativo a múltiplos idiomas.",
+        long_desc_en: "High-fidelity Mobile prototype built with React Native. Features real functionalities: secure authentication, shopping cart, and native multi-language support.",
+        gitUrl: "https://github.com/lu1zedu/meuecommerceapp",
+        previewUrl: "https://expo.dev/accounts/m3rl1m/projects/MeuEcommerceApp",
+        tech_details: [
+            { name: "React Native", icon: <FaReact className="text-blue-400" />, purpose_pt: "Mobile Híbrido.", purpose_en: "Hybrid Mobile." },
+            { name: "Firebase", icon: <FaFire className="text-yellow-500" />, purpose_pt: "Backend Serverless.", purpose_en: "Serverless Backend." },
+            { name: "TypeScript", icon: <FaCode className="text-blue-600" />, purpose_pt: "Tipagem.", purpose_en: "Type safety." },
+            { name: "Context API", icon: <FaProjectDiagram className="text-gray-200" />, purpose_pt: "Estado Global.", purpose_en: "Global State." }
+        ]
+    },
+    {
+        id: 5,
+        title: "ApiSteam",
+        category: "personal",
+        // Imagem: Setup Gamer / Controle
+        img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "API simulando a plataforma Steam (Jogos/Conquistas).",
+        desc_en: "API simulating Steam platform (Games/Achievements).",
+        long_desc_pt: "Web API desenvolvida em C# para gerenciar biblioteca de jogos, DLCs e sistema de conquistas. Focada em performance e organização de código.",
+        long_desc_en: "Web API developed in C# to manage game library, DLCs, and achievement systems. Focused on performance and code organization.",
+        gitUrl: "https://github.com/lu1zedu/apisteam",
+        previewUrl: "#",
+        tech_details: [
+            { name: "C# .NET", icon: <FaWindows className="text-purple-600" />, purpose_pt: "Lógica Backend.", purpose_en: "Backend Logic." },
+            { name: "Steam Logic", icon: <FaSteam className="text-blue-800" />, purpose_pt: "Regras de Negócio.", purpose_en: "Business Rules." },
+            { name: "API Rest", icon: <FaServer className="text-green-600" />, purpose_pt: "Endpoints.", purpose_en: "Endpoints." }
+        ]
+    },
+
+    // --- COLEÇÕES DE ESTUDOS ---
+    {
+        id: 6,
+        title: "CS Algorithms & Games",
+        category: "personal",
+        // Imagem: Arcade Retro / Pixel Art
+        img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "Coleção de algoritmos clássicos: Tetris, Sudoku, Chat.",
+        desc_en: "Collection of classic algorithms: Tetris, Sudoku, Chat.",
+        long_desc_pt: "Um conjunto de projetos focados em lógica pura e estruturas de dados. Inclui um Chat funcional via Sockets (Java), Tetris e Sudoku (Python).",
+        long_desc_en: "A set of projects focused on pure logic and data structures. Includes a functional Chat via Sockets (Java), Tetris and Sudoku (Python).",
         gitUrl: "#",
         previewUrl: "#",
         tech_details: [
-            { name: "Python", icon: <FaPython />, purpose_pt: "Processamento de dados e orquestração da IA.", purpose_en: "Data processing and AI orchestration." },
-            { name: "OpenAI API", icon: <SiOpenai />, purpose_pt: "Motor de inteligência generativa para interpretação.", purpose_en: "Generative intelligence engine for interpretation." },
-            { name: "Streamlit", icon: <SiStreamlit />, purpose_pt: "Frontend rápido para demonstração do protótipo.", purpose_en: "Fast frontend for prototype demonstration." },
-            { name: "Database", icon: <FaDatabase />, purpose_pt: "Armazenamento de histórico de interações.", purpose_en: "Storage of interaction history." }
+            { name: "Java Sockets", icon: <FaJava className="text-orange-600" />, purpose_pt: "Redes.", purpose_en: "Networking." },
+            { name: "Python", icon: <FaPython className="text-yellow-400" />, purpose_pt: "Lógica de Jogos.", purpose_en: "Game Logic." },
+            { name: "Game Logic", icon: <FaGamepad className="text-purple-400" />, purpose_pt: "RPG em Texto.", purpose_en: "Text-based RPG." }
+        ]
+    },
+    {
+        id: 7,
+        title: "Legacy Systems",
+        category: "personal",
+        // Imagem: Computador Antigo / Mainframe
+        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "Sistemas bancários e científicos em Cobol & Fortran.",
+        desc_en: "Banking and scientific systems in Cobol & Fortran.",
+        long_desc_pt: "Exploração de linguagens fundamentais. Projetos incluem um Sistema Bancário Simples (Cobol) e Simulações Físicas (Fortran).",
+        long_desc_en: "Exploration of fundamental languages. Projects include a Simple Banking System (Cobol) and Physics Simulations (Fortran).",
+        gitUrl: "#",
+        previewUrl: "#",
+        tech_details: [
+            { name: "COBOL", icon: <FaTerminal className="text-green-500" />, purpose_pt: "Sistemas Legados.", purpose_en: "Legacy Systems." },
+            { name: "Fortran", icon: <FaCode className="text-blue-500" />, purpose_pt: "Cálculo Científico.", purpose_en: "Scientific." },
+            { name: "Low Level", icon: <FaCogs className="text-gray-400" />, purpose_pt: "Processamento.", purpose_en: "Processing." }
+        ]
+    },
+    {
+        id: 8,
+        title: "C Programming Studies",
+        category: "personal",
+        // Imagem: Código C puro
+        img: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop",
+        desc_pt: "Algoritmos fundamentais e manipulação de memória em C.",
+        desc_en: "Fundamental algorithms and memory manipulation in C.",
+        long_desc_pt: "Implementações em C puro para estudo de alocação de memória, ponteiros e estruturas de controle.",
+        long_desc_en: "Pure C implementations to study memory allocation, pointers, and control structures.",
+        gitUrl: "#",
+        previewUrl: "#",
+        tech_details: [
+            { name: "C Language", icon: <FaCode className="text-gray-300" />, purpose_pt: "Algoritmos.", purpose_en: "Algorithms." },
+            { name: "Pointers", icon: <FaLaptopCode className="text-gray-500" />, purpose_pt: "Memória.", purpose_en: "Memory." }
         ]
     }
 ];
